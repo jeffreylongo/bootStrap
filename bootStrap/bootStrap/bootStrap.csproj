@@ -154,6 +154,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\baseball.jpg" />
+    <Content Include="Images\basketball.jpg" />
+    <Content Include="Images\dartboard.png" />
+    <Content Include="Images\football.jpg" />
+    <Content Include="Images\golf.jpg" />
+    <Content Include="Images\pingpong.jpg" />
+    <Content Include="Images\quidditch.jpg" />
+    <Content Include="Images\sports.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -187,7 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
