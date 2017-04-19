@@ -7,6 +7,7 @@ namespace bootStrap.Models
 {
     public class Teams
     {
+        public string Image { get; set; }
         public int Id { get; set; }
         public int SportId { get; set; }
         public string Name { get; set; }

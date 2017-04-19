@@ -33,9 +33,9 @@ namespace bootStrap.Migrations
 
             var teams = new List<Teams>
             {
-                new Teams{ SportId =3,Name="Tampa Dart Dynamos", NumberOfPlayers = 8 },
-                new Teams {SportId = 6, Name = "St Pete Ping Pong Powerhouse", NumberOfPlayers = 8},
-                new Teams { SportId = 5, Name ="Orlando Golf Gang", NumberOfPlayers= 8},
+                new Teams{ Image="/Images/dartboard.png", SportId =3,Name="Tampa Dart Dynamos", NumberOfPlayers = 8 },
+                new Teams { Image="/Images/pingpong.jpg", SportId = 6, Name = "St Pete Ping Pong Powerhouse", NumberOfPlayers = 8},
+                new Teams { Image="/Images/golf.jpg", SportId = 5, Name ="Orlando Golf Gang", NumberOfPlayers= 8},
             };
             teams.ForEach(team => db.Teams.AddOrUpdate(t => t.Sport, team));
             db.SaveChanges();

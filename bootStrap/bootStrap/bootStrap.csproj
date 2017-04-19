@@ -160,6 +160,14 @@
     <Compile Include="Migrations\201704191837111_addedSportListToConfig.Designer.cs">
       <DependentUpon>201704191837111_addedSportListToConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704191948367_addedImageToTeams.cs" />
+    <Compile Include="Migrations\201704191948367_addedImageToTeams.Designer.cs">
+      <DependentUpon>201704191948367_addedImageToTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704191951557_same.cs" />
+    <Compile Include="Migrations\201704191951557_same.Designer.cs">
+      <DependentUpon>201704191951557_same.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\Sports.cs" />
@@ -238,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704191837111_addedSportListToConfig.resx">
       <DependentUpon>201704191837111_addedSportListToConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704191948367_addedImageToTeams.resx">
+      <DependentUpon>201704191948367_addedImageToTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704191951557_same.resx">
+      <DependentUpon>201704191951557_same.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
