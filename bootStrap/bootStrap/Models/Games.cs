@@ -13,6 +13,7 @@ namespace bootStrap.Models
         public int VisitingTeamId { get; set; }
         public string Score { get; set; }
 
+        public virtual ICollection<Sports> Sports { get; set; } = new HashSet<Sports>();
         public virtual ICollection<Teams> Teams { get; set; } = new HashSet<Teams>();
 
     }
