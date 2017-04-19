@@ -15,6 +15,7 @@ namespace bootStrap.Controllers
         {
             var vm = new ViewModel();
             vm.Teams = new SportsServices().GetTeams();
+            vm.Games = new SportsServices().GetGames();
             return View(vm);
         }
 

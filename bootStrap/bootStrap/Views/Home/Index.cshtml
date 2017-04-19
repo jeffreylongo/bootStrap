@@ -1,5 +1,7 @@
 ﻿@model bootStrap.ViewModels.ViewModel
 
+
+
 @{
     ViewBag.Title = "Home Page";
 
@@ -114,6 +116,7 @@
     </div>
 </div>
 
+
 <div class="panel panel-primary">
     <!-- Default panel contents -->
     <div class="panel-heading">Games</div>
@@ -127,24 +130,16 @@
                 <th>Score</th>
             </tr>
         </thead>
+        @foreach (var game in Model.Games)
+        {
         <tr class="success">
-            <td>1</td>
-            <td>Tampa Dart Dynamos</td>
-            <td>Buffalo BullsEyes</td>
-            <td>20-17</td>
+            <td>@game.Id</td>
+            <td>@game.HomeTeam</td>
+            <td>@game.VisitingTeam</td>
+            <td>@game.Score</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>St Pee Ping Pong Power House</td>
-            <td>Philly Paddlers</td>
-            <td>18-12</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Orlando Golf Gang</td>
-            <td>Portland Putters</td>
-            <td>2-1</td>
-        </tr>
+        }
+        
     </table>
 
 </div>

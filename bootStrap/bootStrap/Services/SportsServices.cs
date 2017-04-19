@@ -22,5 +22,12 @@ namespace bootStrap.Services
             var teams = db.Teams.ToList();
             return teams;
         }
+
+        public List<Games> GetGames()
+        {
+            var db = new SportContext();
+            var games = db.Games.ToList();
+            return games;
+        }
     }
 }

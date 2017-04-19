@@ -40,7 +40,17 @@ namespace bootStrap.Migrations
                 new Teams { Image="/Images/pingpong.jpg", SportId = 5, Name ="Philly Paddlers", NumberOfPlayers= 8},
                 new Teams { Image="/Images/golf.jpg", SportId = 5, Name ="Portland Putters", NumberOfPlayers= 8},
             };
-            teams.ForEach(team => db.Teams.AddOrUpdate(t => t.Sport, team));
+            teams.ForEach(team => db.Teams.AddOrUpdate(t => t.Name, team));
+            db.SaveChanges();
+
+            var games = new List<Games>
+            {
+                new Games{ SportId =3, HomeTeamId=4, VisitingTeamId = 10, Score="20-17" },
+                new Games{ SportId =6, HomeTeamId=5, VisitingTeamId = 11, Score="20-17" },
+                new Games{ SportId =5, HomeTeamId=6, VisitingTeamId = 12, Score="20-17" }
+                };
+
+            games.ForEach(game => db.Games.AddOrUpdate(g => g.Sport, game));
             db.SaveChanges();
         }
     }
