@@ -7,13 +7,13 @@ namespace bootStrap.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedteamsrelationship : IMigrationMetadata
+    public sealed partial class Reset : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedteamsrelationship));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Reset));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704191801450_addedteamsrelationship"; }
+            get { return "201704191821281_Reset"; }
         }
         
         string IMigrationMetadata.Source

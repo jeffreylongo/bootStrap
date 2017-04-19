@@ -1,4 +1,7 @@
-﻿using System;
+﻿using bootStrap.Models;
+using bootStrap.Services;
+using bootStrap.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +13,11 @@ namespace bootStrap.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var vm = new ViewModel();
+            vm.Teams = new SportsServices().GetTeams();
+            return View(vm);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
     }
 }

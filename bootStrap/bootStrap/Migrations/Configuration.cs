@@ -1,6 +1,9 @@
 namespace bootStrap.Migrations
 {
+    using bootStrap.DataContext;
+    using bootStrap.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -12,20 +15,30 @@ namespace bootStrap.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(bootStrap.DataContext.SportContext context)
+        protected override void Seed(bootStrap.DataContext.SportContext db)
         {
-            //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            var sports = new List<Sports>
+            {
+                new Sports{Name = "Baseball"},
+                new Sports{Name = "Basketball"},
+                new Sports{Name = "Darts"},
+                new Sports{Name = "Football"},
+                new Sports{Name = "Golf"},
+                new Sports{Name = "PingPong"},
+                new Sports{Name = "Quidditch"}
+            };
+            sports.ForEach(sport => db.Sports.AddOrUpdate(s => s.Name, sport));
+            db.SaveChanges();
+
+            var teams = new List<Teams>
+            {
+                new Teams{ SportId =3,Name="Tampa Dart Dynamos", NumberOfPlayers = 8 },
+                new Teams {SportId = 6, Name = "St Pete Ping Pong Powerhouse", NumberOfPlayers = 8},
+                new Teams { SportId = 5, Name ="Orlando Golf Gang", NumberOfPlayers= 8},
+            };
+            teams.ForEach(team => db.Teams.AddOrUpdate(t => t.Sport, team));
+            db.SaveChanges();
         }
     }
 }

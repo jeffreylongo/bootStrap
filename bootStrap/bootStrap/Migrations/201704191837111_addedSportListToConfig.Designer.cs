@@ -7,13 +7,13 @@ namespace bootStrap.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class whoknows : IMigrationMetadata
+    public sealed partial class addedSportListToConfig : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(whoknows));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedSportListToConfig));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704191758066_whoknows"; }
+            get { return "201704191837111_addedSportListToConfig"; }
         }
         
         string IMigrationMetadata.Source

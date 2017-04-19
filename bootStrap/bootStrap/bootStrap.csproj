@@ -152,20 +152,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704191758066_whoknows.cs" />
-    <Compile Include="Migrations\201704191758066_whoknows.Designer.cs">
-      <DependentUpon>201704191758066_whoknows.cs</DependentUpon>
+    <Compile Include="Migrations\201704191821281_Reset.cs" />
+    <Compile Include="Migrations\201704191821281_Reset.Designer.cs">
+      <DependentUpon>201704191821281_Reset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704191801450_addedteamsrelationship.cs" />
-    <Compile Include="Migrations\201704191801450_addedteamsrelationship.Designer.cs">
-      <DependentUpon>201704191801450_addedteamsrelationship.cs</DependentUpon>
+    <Compile Include="Migrations\201704191837111_addedSportListToConfig.cs" />
+    <Compile Include="Migrations\201704191837111_addedSportListToConfig.Designer.cs">
+      <DependentUpon>201704191837111_addedSportListToConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\Sports.cs" />
     <Compile Include="Models\Teams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\BaseballServices.cs" />
+    <Compile Include="Services\SportsServices.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -215,7 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -233,11 +233,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704191758066_whoknows.resx">
-      <DependentUpon>201704191758066_whoknows.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704191821281_Reset.resx">
+      <DependentUpon>201704191821281_Reset.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704191801450_addedteamsrelationship.resx">
-      <DependentUpon>201704191801450_addedteamsrelationship.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704191837111_addedSportListToConfig.resx">
+      <DependentUpon>201704191837111_addedSportListToConfig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
