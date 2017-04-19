@@ -12,5 +12,6 @@ namespace bootStrap.Models
         public string Name { get; set; }
         public int NumberOfPlayers { get; set; }
 
+        public virtual ICollection<Sports> sport { get; set; } = new HashSet<Sports>();
     }
 }
