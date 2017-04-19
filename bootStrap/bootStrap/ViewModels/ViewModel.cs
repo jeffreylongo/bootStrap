@@ -9,5 +9,6 @@ namespace bootStrap.ViewModels
     public class ViewModel
     {
         public IEnumerable<Teams> Teams { get; set; }
+        public IEnumerable<Games> Games { get; set; }
     }
 }
